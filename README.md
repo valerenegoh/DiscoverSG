@@ -14,8 +14,6 @@ For a broad overview, here is a youtube link demonstrating all functions and nav
 UI design & SQLite Database: Valerene Goh
 Algorithm: Tracy Yee & Cheryl Goh
 
-## Report write-up
-
 ## Part 1: UI design & SQLite Database
 (done by Valerene)
 
