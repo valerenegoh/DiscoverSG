@@ -1,5 +1,5 @@
 # DiscoverSG
-SUTD ISTD Term 3 Android App Project
+SUTD ISTD Term 3 First Android App Project
 
 Despite being a small country, Singapore has a multitude of distinct attractions for tourists to
 visit, from the magnificent Marina Bay Sands to the cultural streets of Katong. For the
@@ -7,11 +7,17 @@ free-and-easy tourist, it may be difficult to decide where, when and how to get 
 island. Our app is catered to meet these needs. For a broad overview, here is a youtube link
 demonstrating all functions and navigation in our app: https://youtu.be/0ArprZBJLEw
 
+<img width="187" alt="capture" src="https://user-images.githubusercontent.com/23626462/35304854-076c1ac4-00d2-11e8-9742-b3f800b588f5.PNG">
+
 ## Contributors
-UI design & Database: Valerene Goh
+UI design & Database (SQLite): Valerene Goh
 Algorithm: Tracy Yee & Cheryl Goh
 
 ## Report write-up
+
+
+# Part 1 (done by Valerene)
+
 A bottom navigation bar is implemented to navigate between the following three fragments. In
 addition, within “itinerary planning” optimisation function, there is a tab activity of the route.
 
@@ -21,6 +27,14 @@ Each attraction contains a short description of the place for the user to have a
 readup. If the user is interested in a particular attraction, he can add it to a new or existing
 itinerary.
 
+<img width="231" alt="attractions" src="https://user-images.githubusercontent.com/23626462/35304852-06cd0560-00d2-11e8-9314-2dc3fee79dca.PNG">
+<img width="230" alt="3" src="https://user-images.githubusercontent.com/23626462/35304794-dce9c364-00d1-11e8-87c2-f553cf6d5756.PNG">
+<img width="231" alt="newitinerary" src="https://user-images.githubusercontent.com/23626462/35304856-08a3cc2a-00d2-11e8-8f97-00f7f4575ca0.PNG"><img width="230" alt="4" src="https://user-images.githubusercontent.com/23626462/35304797-e0150f8a-00d1-11e8-84ee-8702b2f502df.PNG">
+<img width="231" alt="5" src="https://user-images.githubusercontent.com/23626462/35304798-e0d82a38-00d1-11e8-8066-155987faf550.PNG">
+<img width="230" alt="6" src="https://user-images.githubusercontent.com/23626462/35304800-e19f550e-00d1-11e8-9e9b-cd23030184bc.PNG">
+<img width="230" alt="7" src="https://user-images.githubusercontent.com/23626462/35304802-e2b03d00-00d1-11e8-9e36-caf6f1f820ac.PNG">
+<img width="231" alt="8" src="https://user-images.githubusercontent.com/23626462/35304803-e35819a8-00d1-11e8-8868-d0491a7aa9fe.PNG">
+
 ### B. Itinerary Planning
 The second tab allows user to manage his itineraries: he can view its details, add a new
 itinerary, delete all or individual itineraries and derive an optimal route based on all the
@@ -29,13 +43,26 @@ an optimal path for that itinerary that falls within the given budget, providing
 details on transport mode, time and expenditure. On the adjacent tab, the route is displayed
 on a map fragment for an overarching view of the itinerary travel plan.
 
-### C. Attractions Locator (FUNCTION 2)
+<img width="229" alt="13" src="https://user-images.githubusercontent.com/23626462/35305061-efd88932-00d2-11e8-811a-3a6be0eaa7c1.PNG">
+<img width="230" alt="14" src="https://user-images.githubusercontent.com/23626462/35305064-f0bbb84c-00d2-11e8-8e22-646bee3de49e.PNG">
+<img width="232" alt="15" src="https://user-images.githubusercontent.com/23626462/35305066-f164d788-00d2-11e8-8dd0-03e637eab030.PNG">
+<img width="230" alt="12" src="https://user-images.githubusercontent.com/23626462/35305058-ec6345f8-00d2-11e8-9cef-c8b88f6cb32c.PNG">
+<img width="231" alt="9" src="https://user-images.githubusercontent.com/23626462/35304804-e3c7575a-00d1-11e8-860b-c5b12a689128.PNG">
+<img width="234" alt="10" src="https://user-images.githubusercontent.com/23626462/35304812-e4f986ca-00d1-11e8-9908-a50be4ccd51d.PNG">
+<img width="232" alt="11" src="https://user-images.githubusercontent.com/23626462/35304813-e5c17cd4-00d1-11e8-9f83-758d4a8f8c4d.PNG">
+
+### C. Attractions Locator
 The final tab of DiscoverSG allows tourists to search for any location they want that is within
 Singapore and the view will be displayed on a map. The search view has a fuzzy spell
 checker and autocomplete function of all the attractions in the database to produce quick
 matches. If the location entered is not in Singapore, a toast will prompt the user to re-enter.
 
-## FUNCTION 1
+<img width="229" alt="spellchecker" src="https://user-images.githubusercontent.com/23626462/35304858-09595ff4-00d2-11e8-9b10-1f0c369223f1.PNG">
+<img width="229" alt="1" src="https://user-images.githubusercontent.com/23626462/35304788-d69a2aee-00d1-11e8-95ad-9b3682e0c90e.PNG">
+<img width="230" alt="2" src="https://user-images.githubusercontent.com/23626462/35304793-dbc75c8a-00d1-11e8-9599-a44630005f26.PNG">
+<img width="231" alt="malaysia" src="https://user-images.githubusercontent.com/23626462/35304855-0812c3ce-00d2-11e8-8287-c291c7a6a5dd.PNG">
+
+## Android Features
 ● Recycler views are implemented in three parts of the app: each category page of “Browse
 Attractions”, “Itinerary Planning” main page and the display route details of after
 optimisation page.
@@ -63,7 +90,9 @@ methods when new attractions are added to the attractions data.
 clicking on one of it, the intent passes an extra information - the name of the category -
 which will call upon all the attractions in the database containing that category name.
 
-## Daily Itinerary Planning (FUNCTION 3)
+# Part 2 (done by Tracy and Cheryl)
+
+## Daily Itinerary Planning
 Data Collection: We collated the data provided at the end of the handout into corresponding
 tables of costs and times needed to travel between locations and manually typed out into
 three 3d arrays ( walkTrans , publicTrans and taxiTrans ) containing the cost-time information
