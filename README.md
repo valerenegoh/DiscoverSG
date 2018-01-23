@@ -4,8 +4,9 @@ SUTD ISTD Term 3 First Android App Project
 Despite being a small country, Singapore has a multitude of distinct attractions for tourists to
 visit, from the magnificent Marina Bay Sands to the cultural streets of Katong. For the
 free-and-easy tourist, it may be difficult to decide where, when and how to get around the
-island. Our app is catered to meet these needs. For a broad overview, here is a youtube link
-demonstrating all functions and navigation in our app: https://youtu.be/0ArprZBJLEw
+island. Our app is catered to meet these needs. 
+
+For a broad overview, here is a youtube link demonstrating all functions and navigation in our app: https://youtu.be/0ArprZBJLEw
 
 <img width="187" alt="capture" src="https://user-images.githubusercontent.com/23626462/35304854-076c1ac4-00d2-11e8-9742-b3f800b588f5.PNG">
 
@@ -14,7 +15,6 @@ UI design & Database (SQLite): Valerene Goh
 Algorithm: Tracy Yee & Cheryl Goh
 
 ## Report write-up
-
 
 # Part 1 (done by Valerene)
 
@@ -27,8 +27,7 @@ Each attraction contains a short description of the place for the user to have a
 readup. If the user is interested in a particular attraction, he can add it to a new or existing
 itinerary.
 
-<img width="231" alt="attractions" src="https://user-images.githubusercontent.com/23626462/35304852-06cd0560-00d2-11e8-9314-2dc3fee79dca.PNG"><img width="230" alt="3" src="https://user-images.githubusercontent.com/23626462/35304794-dce9c364-00d1-11e8-87c2-f553cf6d5756.PNG"><img width="231" alt="newitinerary" src="https://user-images.githubusercontent.com/23626462/35304856-08a3cc2a-00d2-11e8-8f97-00f7f4575ca0.PNG"><img width="230" alt="4" src="https://user-images.githubusercontent.com/23626462/35304797-e0150f8a-00d1-11e8-84ee-8702b2f502df.PNG"><img width="231" alt="5" src="https://user-images.githubusercontent.com/23626462/35304798-e0d82a38-00d1-11e8-8066-155987faf550.PNG"><img width="230" alt="6" src="https://user-images.githubusercontent.com/23626462/35304800-e19f550e-00d1-11e8-9e9b-cd23030184bc.PNG">
-<img width="230" alt="7" src="https://user-images.githubusercontent.com/23626462/35304802-e2b03d00-00d1-11e8-9e36-caf6f1f820ac.PNG"><img width="231" alt="8" src="https://user-images.githubusercontent.com/23626462/35304803-e35819a8-00d1-11e8-8868-d0491a7aa9fe.PNG">
+<img width="231" alt="attractions" src="https://user-images.githubusercontent.com/23626462/35304852-06cd0560-00d2-11e8-9314-2dc3fee79dca.PNG"><img width="230" alt="3" src="https://user-images.githubusercontent.com/23626462/35304794-dce9c364-00d1-11e8-87c2-f553cf6d5756.PNG"><img width="231" alt="newitinerary" src="https://user-images.githubusercontent.com/23626462/35304856-08a3cc2a-00d2-11e8-8f97-00f7f4575ca0.PNG"><img width="230" alt="4" src="https://user-images.githubusercontent.com/23626462/35304797-e0150f8a-00d1-11e8-84ee-8702b2f502df.PNG"><img width="229" alt="5" src="https://user-images.githubusercontent.com/23626462/35305649-17eae954-00d5-11e8-87f7-0a62b0146af0.PNG"><img width="230" alt="6" src="https://user-images.githubusercontent.com/23626462/35304800-e19f550e-00d1-11e8-9e9b-cd23030184bc.PNG"><img width="230" alt="7" src="https://user-images.githubusercontent.com/23626462/35304802-e2b03d00-00d1-11e8-9e36-caf6f1f820ac.PNG"><img width="231" alt="8" src="https://user-images.githubusercontent.com/23626462/35304803-e35819a8-00d1-11e8-8868-d0491a7aa9fe.PNG">
 
 ### B. Itinerary Planning
 The second tab allows user to manage his itineraries: he can view its details, add a new
