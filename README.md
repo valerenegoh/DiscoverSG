@@ -7,7 +7,7 @@ free-and-easy tourist, it may be difficult to decide where, when and how to get 
 island. Our app is catered to meet these needs. For a broad overview, here is a youtube link
 demonstrating all functions and navigation in our app: https://youtu.be/0ArprZBJLEw
 
-#Contributors
+##Contributors
 UI design & Database: Valerene Goh
 Algorithm: Tracy Yee & Cheryl Goh
 
@@ -15,13 +15,13 @@ Algorithm: Tracy Yee & Cheryl Goh
 A bottom navigation bar is implemented to navigate between the following three fragments. In
 addition, within “itinerary planning” optimisation function, there is a tab activity of the route.
 
-#A. Browse Attractions
+###A. Browse Attractions
 The first tab contains a wide selection of attractions listed into their respective categories.
 Each attraction contains a short description of the place for the user to have a quick info
 readup. If the user is interested in a particular attraction, he can add it to a new or existing
 itinerary.
 
-#B. Itinerary Planning
+###B. Itinerary Planning
 The second tab allows user to manage his itineraries: he can view its details, add a new
 itinerary, delete all or individual itineraries and derive an optimal route based on all the
 attractions listed in a particular itinerary. Upon entering a budget, an algorithm is run to derive
@@ -29,7 +29,7 @@ an optimal path for that itinerary that falls within the given budget, providing
 details on transport mode, time and expenditure. On the adjacent tab, the route is displayed
 on a map fragment for an overarching view of the itinerary travel plan.
 
-#C. Attractions Locator (FUNCTION 2)
+###C. Attractions Locator (FUNCTION 2)
 The final tab of DiscoverSG allows tourists to search for any location they want that is within
 Singapore and the view will be displayed on a map. The search view has a fuzzy spell
 checker and autocomplete function of all the attractions in the database to produce quick
@@ -65,7 +65,7 @@ tables of costs and times needed to travel between locations and manually typed 
 three 3d arrays ( walkTrans , publicTrans and taxiTrans ) containing the cost-time information
 from one destination to another for the corresponding transportation mode.
 
-#A. Brute Force Solver
+###A. Brute Force Solver
 The brute force algorithm generates the optimal route for a given set of attractions (obtained
 from user input) by systematically enumerating all possible candidates for the solution. Given
 a list of n attractions, the total time complexity of the brute force algorithm is O(n*n!):
@@ -77,7 +77,7 @@ public transport, taxi), which is O(n*n!) total time complexity.
 4. The algorithm finally compares the time-cost averages of all the possible
 permutations to obtain the optimal travel route (route with the lowest time-cost average).
 
-#B. Fast Solver
+###B. Fast Solver
 For our fast solver, we made use of the Nearest Neighbour (NN) algorithm as it is intuitive
 and fast. To find the optimal route given n attractions, the NN algorithm starts with the initial
 location (in this case, the Marina Bay Sands Hotel) and repeatedly visits the nearest unvisited
