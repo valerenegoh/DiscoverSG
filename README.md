@@ -11,12 +11,13 @@ For a broad overview, here is a youtube link demonstrating all functions and nav
 <img width="187" alt="capture" src="https://user-images.githubusercontent.com/23626462/35304854-076c1ac4-00d2-11e8-9742-b3f800b588f5.PNG">
 
 ## Contributors
-UI design & Database (SQLite): Valerene Goh
+UI design & SQLite Database: Valerene Goh
 Algorithm: Tracy Yee & Cheryl Goh
 
 ## Report write-up
 
-# Part 1 (done by Valerene)
+## Part 1: UI design & SQLite Database
+(done by Valerene)
 
 A bottom navigation bar is implemented to navigate between the following three fragments. In
 addition, within “itinerary planning” optimisation function, there is a tab activity of the route.
@@ -76,9 +77,9 @@ methods when new attractions are added to the attractions data.
 clicking on one of it, the intent passes an extra information - the name of the category -
 which will call upon all the attractions in the database containing that category name.
 
-# Part 2 (done by Tracy and Cheryl)
+# Part 2: Daily Itinerary Planning
+(done by Tracy and Cheryl)
 
-## Daily Itinerary Planning
 Data Collection: We collated the data provided at the end of the handout into corresponding
 tables of costs and times needed to travel between locations and manually typed out into
 three 3d arrays ( walkTrans , publicTrans and taxiTrans ) containing the cost-time information
