@@ -1,0 +1,116 @@
+# DiscoverSG
+SUTD ISTD Term 3 Android App Project
+
+Despite being a small country, Singapore has a multitude of distinct attractions for tourists to
+visit, from the magnificent Marina Bay Sands to the cultural streets of Katong. For the
+free-and-easy tourist, it may be difficult to decide where, when and how to get around the
+island. Our app is catered to meet these needs. For a broad overview, here is a youtube link
+demonstrating all functions and navigation in our app: https://youtu.be/0ArprZBJLEw
+
+#Contributors
+UI design & Database: Valerene Goh
+Algorithm: Tracy Yee & Cheryl Goh
+
+##Report write-up
+A bottom navigation bar is implemented to navigate between the following three fragments. In
+addition, within “itinerary planning” optimisation function, there is a tab activity of the route.
+
+#A. Browse Attractions
+The first tab contains a wide selection of attractions listed into their respective categories.
+Each attraction contains a short description of the place for the user to have a quick info
+readup. If the user is interested in a particular attraction, he can add it to a new or existing
+itinerary.
+
+#B. Itinerary Planning
+The second tab allows user to manage his itineraries: he can view its details, add a new
+itinerary, delete all or individual itineraries and derive an optimal route based on all the
+attractions listed in a particular itinerary. Upon entering a budget, an algorithm is run to derive
+an optimal path for that itinerary that falls within the given budget, providing all the necessary
+details on transport mode, time and expenditure. On the adjacent tab, the route is displayed
+on a map fragment for an overarching view of the itinerary travel plan.
+
+#C. Attractions Locator (FUNCTION 2)
+The final tab of DiscoverSG allows tourists to search for any location they want that is within
+Singapore and the view will be displayed on a map. The search view has a fuzzy spell
+checker and autocomplete function of all the attractions in the database to produce quick
+matches. If the location entered is not in Singapore, a toast will prompt the user to re-enter.
+
+##FUNCTION 1
+● Recycler views are implemented in three parts of the app: each category page of “Browse
+Attractions”, “Itinerary Planning” main page and the display route details of after
+optimisation page.
+● A single SQLite external database is implemented, which houses and chooses between
+two internal database to run - one for attractions and one for itineraries. Each database
+has its own custom set of methods to implement (DbManager). All attractions are loaded
+from the json file “attractions.json” upon one-time creation of the table.
+Note: A secondary data file “attractions2.json” containing 100 more attractions can be
+uploaded by swapping the two file names and changing the attractions table version
+under its DbHelper to x+1. However, these additional data do not contain to-from
+time-cost details of various transport modes as they were not provided.
+● As aforementioned, the raw folder contains internal JSON storage of the attractions. Each
+attraction contains its name, category, details (which we generated separately using
+Wikipedia API) and lat long (which is extraneous data).
+● In Function 2, the fuzzy spellchecker computes the levenshtein distance between two
+strings - the ones inputted by the user and the ones in our database. We set the similarity
+factor to 0.7. This, compounded with the autocomplete function, allows more flexibility
+than implementing a regex method, which requires the developer to update the regex
+methods when new attractions are added to the attractions data.
+● The categories page utilizes a custom gridview to house its images and texts. Upon
+clicking on one of it, the intent passes an extra information - the name of the category -
+which will call upon all the attractions in the database containing that category name.
+
+##Daily Itinerary Planning (FUNCTION 3)
+Data Collection: We collated the data provided at the end of the handout into corresponding
+tables of costs and times needed to travel between locations and manually typed out into
+three 3d arrays ( walkTrans , publicTrans and taxiTrans ) containing the cost-time information
+from one destination to another for the corresponding transportation mode.
+
+#A. Brute Force Solver
+The brute force algorithm generates the optimal route for a given set of attractions (obtained
+from user input) by systematically enumerating all possible candidates for the solution. Given
+a list of n attractions, the total time complexity of the brute force algorithm is O(n*n!):
+1. Add each attraction in a single permutation (total n attractions) to an ArrayList → O(n)
+2. Add each permutation (n! possible permutations in total) to another ArrayList → O(n!)
+3. Then, the algorithm computes the time-cost average of each path [O(n)] in each route
+[O(n!)] by taking the average of the (time*cost) of the three transport modes (walk,
+public transport, taxi), which is O(n*n!) total time complexity.
+4. The algorithm finally compares the time-cost averages of all the possible
+permutations to obtain the optimal travel route (route with the lowest time-cost average).
+
+#B. Fast Solver
+For our fast solver, we made use of the Nearest Neighbour (NN) algorithm as it is intuitive
+and fast. To find the optimal route given n attractions, the NN algorithm starts with the initial
+location (in this case, the Marina Bay Sands Hotel) and repeatedly visits the nearest unvisited
+attraction until all the attractions have been visited. The algorithm then returns to the initial
+location (in this case, the Marina Bay Sands Hotel). The time complexity of this algorithm is:
+1. Find the nearest neighbour for each point → O(n)
+2. Compute the time-cost average (mentioned above) from source to all points → O(n)
+3. Repeat steps 1 and 2 n times for n attractions → O(n^2)
+Hence, the total time complexity is O(n^2 + n^2) = O(n^2), which is polynomial (decently fast).
+
+Since this algorithm is a greedy algorithm, it yields quick results but compromises on the
+accuracy ( yields a path 25% longer than the shortest possible path on average). Hence, to
+further optimise the “optimal” route generated by the NN algorithm, we used the 2-opt
+technique (iteratively remove two edges and replace them with two different edges that
+reconnect the fragments into a new and shorter route). Furthermore, starting with the NN
+algorithm rather than using the 2-opt algorithm from scratch decreases the time complexity of
+the 2-opt algorithm from O(n log(n)) to O(n). Hence, the total time complexity of the NN-2opt
+algorithm is O(n^2 + n) = O(n^2) and the accuracy is further improved to give a reasonably
+good solution that is close enough to the shortest possible path.
+
+We then set the default transportation mode for each path in the optimal route to be by Taxi
+as it is the fastest and hence most optimal. The total transport cost for the optimal route is
+then calculated and the path with the shortest travel time is iteratively replaced with public
+transport if the budget is exceeded (start replacing with walking if all paths are public
+transport and budget is still exceeded). This is to ensure that the total transport time is
+minimised while still staying within the constraint of the daily transport budget.
+
+In conclusion, the fast solver, O(n^2), is faster than the brute force solver, O(n*n!), but it is
+less accurate as it does not actually calculate out all the possible routes and their transport
+times and costs (hence its speed). Hence, to ensure a balance of speed and accuracy, we
+implement the brute force solver if the number of attractions entered is less than 10, and the
+fast solver for 10 or more attractions. For testing, we ran the provided data on the mobile
+phone with a budget of $20. The brute force solver took 2.6s while the fast solver took 2.4s,
+which are close to the industry standard of <2s app loading time. Hence, we concluded that
+for fewer attractions, the running time for both solvers are approximately the same, hence our
+decision to use the brute force solver for fewer attractions as it is more accurate.
