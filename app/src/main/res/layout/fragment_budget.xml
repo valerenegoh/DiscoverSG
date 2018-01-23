@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchitinerary"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/location_search_bar"
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:drawableRight="@drawable/dummy"
+        android:drawablePadding="10dp"
+        android:padding="5dp"
+        android:queryHint="Search attraction here"/>
+
+    <RelativeLayout
+        android:id="@+id/myItineraries"
+        android:layout_below="@id/searchitinerary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="My Itineraries"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/deleteAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_alignParentRight="true"
+            android:paddingRight="20dp"
+            android:background="@null"
+            android:src="@drawable/ic_delete_black_24dp"/>
+
+        <ImageButton
+            android:id="@+id/debugItineraries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingTop="5dp"
+            android:paddingLeft="20dp"
+            android:background="@null"
+            android:src="@drawable/ic_bug_report_black_24dp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width = "match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/recyclingItineraries"
+        android:layout_below="@id/myItineraries"
+        android:layout_above="@id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addEmptyItinerary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="30dp"
+            android:clickable="true"
+            android:layout_gravity="bottom|end"
+            android:elevation="4dp"
+            android:src="@drawable/ic_add_white_24dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerviewItineraries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myItineraries"
+            android:layout_marginTop="10dp">
+        </android.support.v7.widget.RecyclerView>
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>

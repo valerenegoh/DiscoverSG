@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:typeface="serif"
+        android:gravity="center_horizontal"/>
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/singapore"
+        android:maxHeight="200dp"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"
+        android:maxHeight="80dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"/>
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start exploring"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:background="@color/colorPrimary"
+        android:shadowColor="@color/colorLight"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_marginTop="50dp"/>
+
+</LinearLayout>

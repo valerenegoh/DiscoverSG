@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/btmBarLocator"
+        android:icon="@drawable/locator"
+        android:title="Attractions"></item>
+
+    <item android:id="@+id/btmBarItenrary"
+        android:icon="@drawable/itenarary"
+        android:title="Planner"></item>
+
+    <item android:id="@+id/btmBarBudget"
+        android:icon="@drawable/budget"
+        android:title="Budgeting"></item>
+</menu>

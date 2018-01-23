@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/location"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/location_search_bar"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:drawableRight="@drawable/dummy"
+            android:drawablePadding="10dp"
+            android:padding="15dp"
+            android:hint="Search location here"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/colorPrimary"/>
+
+        <ImageButton
+            android:id="@+id/cancellocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cancel_black_24dp"
+            android:layout_alignParentRight="true"
+            android:padding="15dp"
+            android:layout_marginRight="50dp"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/searchlocation"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+
+
+    </RelativeLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" />
+</LinearLayout>

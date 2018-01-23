@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/try_attraction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input an attraction from database"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/descriptionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="get description"/>
+
+        <TextView
+            android:id="@+id/latlongDebugger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionButton" />
+
+        <TextView
+            android:id="@+id/categoryDebugger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionButton"
+            android:layout_toRightOf="@id/latlongDebugger"/>
+
+        <TextView
+            android:id="@+id/descriptionDebugger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/latlongDebugger" />
+
+        <Button
+            android:id="@+id/latlongButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="get lat long"
+            android:layout_toRightOf="@id/descriptionButton"/>
+
+        <Button
+            android:id="@+id/categoryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="get type"
+            android:layout_toRightOf="@id/latlongButton"/>
+
+        <Button
+            android:id="@+id/loadAttractions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="load"
+            android:layout_below="@id/descriptionDebugger"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:id="@+id/deleteAttractions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delete"
+            android:layout_below="@id/descriptionDebugger"
+            android:layout_toRightOf="@id/loadAttractions"/>
+
+        <Button
+            android:id="@+id/fetchNames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fetch"
+            android:layout_toRightOf="@id/deleteAttractions"
+            android:layout_below="@id/descriptionDebugger"/>
+
+        <Button
+            android:id="@+id/fetchAllAttractions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fetch all"
+            android:layout_toRightOf="@id/fetchNames"
+            android:layout_below="@id/descriptionDebugger"/>
+
+        <ScrollView
+            android:id="@+id/AttractionNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loadAttractions">
+            <TextView
+                android:id="@+id/attractionsDatabaseNames"
+                android:text="attractions names"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/dataTable"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/AttractionNames"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/attractionsDatabase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="data table"/>
+        </ScrollView>
+
+    </RelativeLayout>
+</LinearLayout>

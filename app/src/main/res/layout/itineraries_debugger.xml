@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/addItinerary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="input itinerary name"/>
+
+            <Button
+                android:id="@+id/newItineraryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addItinerary"
+                android:text="add itinerary"/>
+
+            <Button
+                android:id="@+id/addAttractionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addItinerary"
+                android:layout_toRightOf="@id/newItineraryButton"
+                android:text="add attraction"/>
+
+            <EditText
+                android:id="@+id/addAttraction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/newItineraryButton"
+                android:hint="input attraction name"/>
+
+            <Button
+                android:id="@+id/addItineraryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addAttraction"
+                android:text="add itinerary"/>
+
+            <Button
+                android:id="@+id/displayItineraries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/addItineraryButton"
+                android:layout_below="@id/addAttraction"
+                android:text="display database"/>
+
+            <EditText
+                android:id="@+id/fetchVisitingAttractions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addItineraryButton"
+                android:hint="input itinerary name here"/>
+
+            <Button
+                android:id="@+id/fetchVisitingAttractionsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fetchVisitingAttractions"
+                android:text="fetch tovisit"/>
+
+            <Button
+                android:id="@+id/deleteDatabase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/fetchVisitingAttractionsButton"
+                android:layout_below="@id/fetchVisitingAttractions"
+                android:text="delete all"/>
+
+            <Button
+                android:id="@+id/itinerarytable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/deleteDatabase"
+                android:layout_below="@id/fetchVisitingAttractions"
+                android:text="tabularize"/>
+
+            <ScrollView
+                android:id="@+id/displayAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itinerarytable">
+                <TextView
+                    android:id="@+id/displaydatabase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fetchVisitingAttractionsButton"
+                    android:text="data table"/>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/tovisitText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/displayAll">
+                <TextView
+                    android:id="@+id/visitingAttractionsDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/displaydatabase"
+                    android:text="visiting attractions"/>
+            </ScrollView>
+        </RelativeLayout>
+</LinearLayout>

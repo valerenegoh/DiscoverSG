@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/debugAttractions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="15dp"
+        android:paddingLeft="20dp"
+        android:background="@null"
+        android:src="@drawable/ic_bug_report_black_24dp"/>
+
+    <TextView
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Attractions"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
+    <View
+        android:id="@+id/line5"
+        android:layout_width = "match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"/>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Header"
+        android:layout_above="@id/line5"
+        android:columnWidth="90dp"
+        android:numColumns="2"
+        android:padding="4dp"
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp"
+        android:gravity="center"
+        android:scrollbars="vertical"
+        android:stretchMode="columnWidth">
+    </GridView>
+
+</RelativeLayout>
