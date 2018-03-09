@@ -1,4 +1,4 @@
-# SUTD ISTD Term 3 First Android App Project
+# SUTD ISTD Term 4 First Android App Project
 
 Despite being a small country, Singapore has a multitude of distinct attractions for tourists to
 visit, from the magnificent Marina Bay Sands to the cultural streets of Katong. For the
