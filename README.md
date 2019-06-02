@@ -10,7 +10,7 @@ For a broad overview, here is a youtube link demonstrating all functions and nav
 <img width="187" alt="capture" src="https://user-images.githubusercontent.com/23626462/35304854-076c1ac4-00d2-11e8-9742-b3f800b588f5.PNG">
 
 ## Contributors
-UI design & SQLite Database: Valerene Goh
+UI design & SQLite Database (the app): Valerene Goh
 
 Algorithm: Tracy Yee & Cheryl Goh
 
